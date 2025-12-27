@@ -1,0 +1,48 @@
+{
+  "name": "chord-companion",
+  "version": "1.0.0",
+  "description": "Chord Companion helps songwriters generate chord progressions and get smart chord suggestions to overcome creative blocks.",
+  "main": "main.js",
+  "author": "Carl-Michael Lindfors",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:all": "electron-builder -mwl",
+    "build:mac": "electron-builder -m",
+    "build:win": "electron-builder -w",
+    "build:linux": "electron-builder -l"
+  },
+  "build": {
+    "appId": "com.mi00le.chordcompanion",
+    "productName": "Chord Companion",
+    "files": [
+      "main.js",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "category": "Audio",
+      "icon": "assets/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "tone": "^15.1.22"
+  }
+}

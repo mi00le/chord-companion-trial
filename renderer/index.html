@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Chord Companion App</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h2>Chord Companion</h2>
+
+		<div id="chordPalette"></div>
+		<!-- <div id="chordLegend">
+			<span class="legend-item major">Major</span>
+			<span class="legend-item minor">Minor</span>
+			<span class="legend-item seventh">7th</span>
+			<span class="legend-item diminished">Dim</span>
+		</div> -->
+
+		<div id="controls">
+			<button id="starterBtn">Add Starter Progression</button>
+			<button id="playBtn">▶ Play progression</button>
+
+			<select id="styleSelect">
+				<option value="pop">Pop</option>
+				<option value="cinematic">Cinematic</option>
+				<option value="sad">Sad</option>
+				<option value="uplifting">Uplifting</option>
+				<option value="jazzish">Jazz-ish</option>
+				<option value="experimental">Experimental</option>
+			</select>
+
+			<select id="keySelect">
+				<!-- Major keys -->
+				<option value="C">C Major</option>
+				<option value="C#">C# Major</option>
+				<option value="D">D Major</option>
+				<option value="D#">D# Major</option>
+				<option value="E">E Major</option>
+				<option value="F">F Major</option>
+				<option value="F#">F# Major</option>
+				<option value="G">G Major</option>
+				<option value="G#">G# Major</option>
+				<option value="A">A Major</option>
+				<option value="A#">A# Major</option>
+				<option value="B">B Major</option>
+
+				<!-- Minor keys -->
+				<option value="Cm">C Minor</option>
+				<option value="C#m">C# Minor</option>
+				<option value="Dm">D Minor</option>
+				<option value="D#m">D# Minor</option>
+				<option value="Em">E Minor</option>
+				<option value="Fm">F Minor</option>
+				<option value="F#m">F# Minor</option>
+				<option value="Gm">G Minor</option>
+				<option value="G#m">G# Minor</option>
+				<option value="Am">A Minor</option>
+				<option value="A#m">A# Minor</option>
+				<option value="Bm">B Minor</option>
+			</select>
+
+			<button id="clearBtn">Clear progression</button>
+		</div>
+
+		<div id="progression">Current progression:</div>
+
+		<h3>Next chord suggestions:</h3>
+		<div id="output"></div>
+		<script src="Tone.js"></script>
+
+		<script src="index.js"></script>
+	</body>
+</html>

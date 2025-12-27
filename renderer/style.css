@@ -1,0 +1,201 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 60px 40px;
+  background: #f4f4f4;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#chordPalette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 500px;
+}
+
+#chordPalette button {
+  padding: 14px 0;
+  border: 2px solid #555;
+  background: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  color: #222;
+}
+
+#chordPalette button:hover {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+#controls select,
+#controls button {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#controls button:hover,
+#controls select:hover {
+  border-color: #000;
+}
+
+#progression {
+  width: 100%;
+  max-width: 500px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 16px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 35px;
+  color: #222;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+#output {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+}
+
+.suggestion {
+  padding: 16px 16px 24px 16px;
+  background: #fff;
+  border: 2px solid #555;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1rem;
+  color: #222;
+}
+
+.suggestion:hover {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+.suggestion-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.reason {
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 6px;
+  color: #555;
+  font-style: italic;
+}
+
+.confidence-bar {
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 12px;
+  background: #d0d0d0; /* light gray track */
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  width: 0%;
+  background: #444; /* muted dark gray fill */
+  transition: width 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+/* Palette button type colors (muted gray scale) */
+#chordPalette button.major {
+  border-color: #444;
+}
+#chordPalette button.minor {
+  border-color: #666;
+}
+#chordPalette button.diminished {
+  border-color: #888;
+}
+#chordPalette button.seventh {
+  border-color: #aaa;
+}
+
+/* Hover effect muted */
+#chordPalette button.major:hover {
+  background: #444;
+}
+#chordPalette button.minor:hover {
+  background: #666;
+}
+#chordPalette button.diminished:hover {
+  background: #888;
+}
+#chordPalette button.seventh:hover {
+  background: #aaa;
+}
+
+/* Chord legend */
+#chordLegend {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.legend-item {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 2px solid #555;
+  color: #222;
+}
